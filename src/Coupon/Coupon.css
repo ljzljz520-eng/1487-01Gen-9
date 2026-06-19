@@ -1,0 +1,187 @@
+.epw-coupon {
+  --epw-coupon-color: #ff4d4f;
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 280px;
+}
+
+.epw-coupon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.epw-coupon.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.epw-coupon.is-disabled:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.epw-coupon__left {
+  flex: 0 0 120px;
+  background: var(--epw-coupon-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+  position: relative;
+  background-image:
+    radial-gradient(circle at 0 50%, transparent 6px, #fff 6px),
+    radial-gradient(circle at 100% 50%, transparent 6px, #fff 6px);
+  background-size: 12px 100%;
+  background-position: -6px 0, calc(100% + 6px) 0;
+}
+
+.epw-coupon__amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.epw-coupon__currency {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.epw-coupon__value {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  font-family: 'DIN Alternate', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.epw-coupon__condition {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.epw-coupon__divider {
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 4px,
+    #eee 4px,
+    #eee 8px
+  );
+  margin: 8px 0;
+}
+
+.epw-coupon__right {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+.epw-coupon__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.epw-coupon__desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.4;
+}
+
+.epw-coupon__btn {
+  padding: 6px 16px;
+  background: var(--epw-coupon-color);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 4px;
+  transition: opacity 0.2s;
+}
+
+.epw-coupon__btn:hover {
+  opacity: 0.9;
+}
+
+.epw-coupon__status-badge {
+  padding: 4px 12px;
+  background: #f5f5f5;
+  color: #999;
+  border-radius: 12px;
+  font-size: 12px;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.epw-coupon--mini {
+  min-width: auto;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--epw-coupon-color);
+  color: #fff;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.epw-coupon--mini .epw-coupon__left {
+  flex: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2px;
+  background-image: none;
+}
+
+.epw-coupon--mini .epw-coupon__currency {
+  font-size: 12px;
+}
+
+.epw-coupon--mini .epw-coupon__value {
+  font-size: 20px;
+}
+
+.epw-coupon--mini .epw-coupon__condition {
+  font-size: 10px;
+  margin-left: 4px;
+  margin-top: 0;
+  opacity: 0.85;
+}
+
+.epw-coupon--mini .epw-coupon__right {
+  flex: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.epw-coupon--mini .epw-coupon__action {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.epw-coupon--mini .epw-coupon__status {
+  font-size: 11px;
+  opacity: 0.8;
+  white-space: nowrap;
+}

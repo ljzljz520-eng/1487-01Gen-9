@@ -1,0 +1,323 @@
+.activity__banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff4d4f 100%);
+  border-radius: 12px;
+  padding: 48px 32px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity__banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.activity__banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.activity__title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 4px;
+}
+
+.activity__subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.activity__countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+}
+
+.activity__countdown-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.activity__section {
+  margin-bottom: 40px;
+}
+
+.activity__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity__section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  padding-left: 12px;
+}
+
+.activity__section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #ff4d4f;
+  border-radius: 2px;
+}
+
+.activity__section-more {
+  font-size: 14px;
+  color: #ff4d4f;
+  cursor: pointer;
+}
+
+.activity__flash-countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.activity__flash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.flash-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.flash-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.flash-card.is-sold-out {
+  cursor: not-allowed;
+}
+
+.flash-card.is-sold-out:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.flash-card__image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.flash-card__sold-out {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flash-card__discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.flash-card__info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flash-card__name {
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flash-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.flash-card__price-current {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4d4f;
+  font-family: 'DIN Alternate', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.flash-card__price-origin {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.flash-card__stock-bar {
+  margin: 4px 0;
+}
+
+.flash-card__btn {
+  width: 100%;
+  height: 36px;
+  background: linear-gradient(90deg, #ff6b6b, #ff4d4f);
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.flash-card__btn:hover {
+  opacity: 0.9;
+}
+
+.flash-card__btn.is-disabled {
+  background: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.activity__coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.activity__progress {
+  padding: 24px;
+  background: linear-gradient(135deg, #fff7e6 0%, #fff1f0 100%);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.activity__progress-tips {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.activity__progress-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.activity__progress-tip .dot {
+  width: 8px;
+  height: 8px;
+  background: #ff4d4f;
+  border-radius: 50%;
+}
+
+.activity__demo-section {
+  margin-bottom: 32px;
+}
+
+.activity__demo-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.activity__demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.activity__demo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.activity__demo-label {
+  font-size: 12px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .activity__banner {
+    padding: 32px 20px;
+  }
+
+  .activity__title {
+    font-size: 28px;
+  }
+
+  .activity__subtitle {
+    font-size: 14px;
+  }
+
+  .activity__flash-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .flash-card__image {
+    height: 140px;
+  }
+
+  .flash-card__info {
+    padding: 12px;
+  }
+
+  .flash-card__price-current {
+    font-size: 18px;
+  }
+
+  .activity__coupons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity__demo-row {
+    gap: 12px;
+  }
+
+  .activity__demo-item {
+    flex: 1 1 calc(50% - 6px);
+    padding: 12px;
+  }
+}

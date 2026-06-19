@@ -1,0 +1,86 @@
+.epw-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.epw-countdown__label {
+  color: #666;
+  font-size: 12px;
+}
+
+.epw-countdown__numbers {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  --epw-countdown-color: #ff4d4f;
+}
+
+.epw-countdown__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  background: var(--epw-countdown-color);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  font-family: 'DIN Alternate', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.epw-countdown__colon {
+  color: var(--epw-countdown-color);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.epw-countdown__unit {
+  color: #666;
+  font-size: 12px;
+  margin: 0 2px;
+}
+
+.epw-countdown__numbers--short {
+  gap: 6px;
+}
+
+.epw-countdown__block {
+  display: inline-flex;
+  align-items: baseline;
+  background: var(--epw-countdown-color);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'DIN Alternate', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.epw-countdown__block i {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: normal;
+  margin-left: 2px;
+  opacity: 0.9;
+}
+
+.epw-countdown__numbers--minimal {
+  color: var(--epw-countdown-color);
+  font-weight: bold;
+  font-family: 'DIN Alternate', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.epw-countdown__item {
+  color: var(--epw-countdown-color);
+  font-size: 14px;
+}
+
+.epw-countdown__ended {
+  color: #999;
+  font-size: 12px;
+}
